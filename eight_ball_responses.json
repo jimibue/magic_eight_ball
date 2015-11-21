@@ -1,0 +1,22 @@
+{
+	"default_answers": [
+		{"text": "it is certain", "type" : "postive"},
+		{"text": "Yes, definitely", "type" : "postive"},
+		{"text": "You may rely on it", "type" : "postive"},
+		{"text": "As I see it, yes", "type" : "postive"},
+		{"text": "Most likely", "type" : "postive"},
+		{"text": "Outlook good", "type" : "postive"},
+		{"text": "Yes", "type" : "postive"},
+		{"text": "reply hazy try again", "type" : "neutral"},
+		{"text": "Ask again later", "type" : "neutral"},
+		{"text": "reply hazy try again", "type" : "neutral"},
+		{"text": "Better not tell you now", "type" : "neutral"},
+		{"text": "Cannot predict now", "type" : "neutral"},
+		{"text": "Don't count on it", "type" : "negative"},
+		{"text": "My sources say no", "type" : "negative"},
+		{"text": "Outlook not so good", "type" : "negative"},
+		{"text": "Very doubtful", "type" : "negative"}
+	]
+}
+
+
