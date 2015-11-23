@@ -1,5 +1,6 @@
 #need json gem to read json file containing responses
 require 'json'
+require 'pry'
 
 #Create a hash using json and array of responses
 file = File.read('eight_ball_responses.json')
@@ -12,8 +13,9 @@ easter_eggs = {
 	"add_answers" => { method: Proc.new { add_answers } },
 	"reset_answers" => { method: Proc.new { reset_answers } },
 	"quit" => { method: Proc.new {puts "Goodbye"; exit(0)} },
-	"q" => { method: Proc.new {puts "Goodbye"; exit(0)} },
+	"q" => { method: Proc.new {puts "Goodbye"; exit(0)} }
 }
+
 ########EASTER EGGS METHODS
 
 #helper remove white space and make input case insentive
@@ -44,9 +46,17 @@ def print_answers
 end
 
 # Entry into main Program
+first_arg = ARGV[0].strip if ARGV[0]
+Binding.pry
+ARGV.clear
+puts first_arg
+add_answers if first_arg == 'add_answers'
+
 while true
 	puts "Ask a question or type '(q)uit' to exit"
 	input = get_input
 	#if user entered an easter egg option call the assciocated proc, else prints random response
 	easter_eggs.keys.include?(input) ? easter_eggs[input][:method].call : (puts "#{@responses.sample}")	
 end
+
+
